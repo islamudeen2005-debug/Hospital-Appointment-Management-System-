@@ -1,0 +1,26 @@
+{
+  "name": "hospital-appointment-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "create-admin": "node scripts/createAdmin.js",
+    "list-admins": "node scripts/listAdmins.js",
+    "reset-admin-credentials": "node scripts/resetAdminCredentials.js",
+    "seed:doctors": "node scripts/seedDemoDoctors.js",
+    "test": "node --test ./tests/**/*.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.0",
+    "multer": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
