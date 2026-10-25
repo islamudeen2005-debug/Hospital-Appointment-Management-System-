@@ -18,13 +18,14 @@ const allowedOrigins = (process.env.CLIENT_URL || 'http://localhost:3000,http://
 
 app.use(
   cors({
-    origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-        return;
-      }
-      callback(new Error('Not allowed by CORS'));
-    },
+    // origin: (origin, callback) => {
+    //   if (!origin || allowedOrigins.includes(origin)) {
+    //     callback(null, true);
+    //     return;
+    //   }
+    //   callback(new Error('Not allowed by CORS'));
+    // },
+    origin: "*",
     credentials: true,
   })
 );
